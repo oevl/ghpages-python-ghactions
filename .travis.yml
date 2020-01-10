@@ -1,4 +1,8 @@
-language: ruby
-rvm:
- - 2.2
- - jruby
+language: python
+python:
+  - "3.7"
+# command to install dependencies
+install:
+  - pip install PyYAML
+# command to run tests
+script: python3 builder.py
