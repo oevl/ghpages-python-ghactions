@@ -2,5 +2,48 @@ Meetup:
   Vol: 25
   Fecha: 11 de enero de 2020
   Foto: imagen-meetup.png
+
 Saludo:
-  - 
+  titulo: ¡Hola a todos!
+  texto: >
+    Somos un grupo de personas interesadas en el lenguaje de programación Python o cualquier tecnología relacionada. Organizamos eventos mensuales para compartir conocimiento y hacer networking.
+
+Actividades:
+  Talks:
+      - Titulo: Blockchains con Python
+        Expositor: Marta Maleyka ft. Adriaan Beiertz
+  Workshop: 
+    - Titulo: Basic Excel Operations with Python
+      Expositor: Santos Rivera
+  Networking: >
+    Los invitamos a que traigan tarjetas de presentación para intercambiar con otros asistentes y generar nuevas conversaciones y contactos.
+
+Datos:
+  Fecha: Miércoles 11 de diciembre de 2019
+  Lugar: Salón 254 Universidad Interamericana de Panamá - Sede Av. Ricardo J. Alfaro
+  Costo: ¡Libre!
+
+Expositores:
+  - Nombre: Marta Maleyka
+    Foto: MartaMaleyka.png
+  - Nombre: Adriaan Beiertz
+    Foto: AdriaanBeiertz.png
+  - Nombre: Santos Rivera
+    Foto: SantosRivera.png
+
+Logos:
+  - Logo: GMB.png
+  - Logo: IBM.png
+
+Testimonios:
+  - Testimonio: >
+      This conference changed my life because I found my wife there.
+    Nombre: Josh Williams
+  - Testimonio: >
+      It takes a really long time to get to this event. Worth it? Maybe.
+    Nombre: Jill Carson
+  - Testimonio: >
+      Sometimes I like to be glamorous. It makes me feel good inside.
+    Nombre: Chase Harrop
+
+MeetupURL: https://www.meetup.com/es-ES/Python-Panama/events/266892502/
