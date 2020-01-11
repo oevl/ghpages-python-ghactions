@@ -41,4 +41,4 @@ jobs:
       with:
         username: "Omar Vasquez"
         useremail: "omar.vasquezlima@gmail.com"
-        keepFiles:  true
+        keepFiles:  false
