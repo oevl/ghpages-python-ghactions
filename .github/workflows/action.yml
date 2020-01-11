@@ -17,7 +17,8 @@ jobs:
       run: pip install -r requirements.txt
     - name: Run builder.py
       run: mkdir static && python builder.py
-    - name: |
+    - name: Set git user and email configuration 
+      run: |
         git config --global user.name 'Omar Vasquez Lima'
         git config --global user.email 'omar.vasquezlima@gmail.com'
     - name: publish-to-git
