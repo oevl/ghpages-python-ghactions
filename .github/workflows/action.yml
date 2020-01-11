@@ -1,14 +1,15 @@
-name: Python CI
+name: github pages
 
-on: [push]
+on:
+  push:
+    branches:
+    - master
 
 jobs:
-  build:
-
-    runs-on: ubuntu-latest
-
+  build-deploy:
+    runs-on: ubuntu-18.04
     steps:
-    - uses: actions/checkout@master
+    - uses: actions/checkout@v1
     - name: Set up Python 3.x
       uses: actions/setup-python@v1
       with:
@@ -17,18 +18,13 @@ jobs:
       run: pip install -r requirements.txt
     - name: Run builder.py
       run: python builder.py
-    - name: Git config, commit and push
-      run: |
-        git config user.name 'Omar Vasquez Lima'
-        git config user.email 'omar.vasquezlima@gmail.com'
-#         git add index.html
-#         git commit -m 'Build commit.'
-#         git push
-    - name: publish-to-git
-      uses: seanmiddleditch/gha-publish-to-git@v1
+    - name: Deploy
+      uses: peaceiris/actions-gh-pages@v2
+      env:
+        ACTIONS_DEPLOY_KEY: ${{ secrets.ACTIONS_DEPLOY_KEY }}
+        PUBLISH_BRANCH: gh-pages
+        PUBLISH_DIR: ./public
       with:
-        branch: master
-        repository: oevl/ghpages-python-ghactions
-        github_pat: '${{ secrets.GH_PAT }}'
-        commit_author: 'omar.vasquezlima@gmail.com'
-        if: success() && github.event == 'push
+        username: "iris"
+        useremail: "iris@peaceiris.com"
+      
