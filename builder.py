@@ -7,13 +7,13 @@ import jinja2
 with open('meetup.yaml') as f:
     
     data = yaml.load(f, Loader=yaml.FullLoader)
-    #print(data)
-
+	
 # Load the template
 templateLoader = jinja2.FileSystemLoader(searchpath="./")
 templateEnv = jinja2.Environment(loader=templateLoader)
 TEMPLATE_FILE = "template.html"
 template = templateEnv.get_template(TEMPLATE_FILE)
+# Render the template
 renderedTemplate= template.render(
 	Meetup = data['Meetup'],
 	Saludo = data['Saludo'],
@@ -23,8 +23,8 @@ renderedTemplate= template.render(
 	Patrocinantes = data['Patrocinantes'],
 	Testimonios = data ['Testimonios'],
 	MeetupURL = data['MeetupURL']
-)  # this is where to put args to the template renderer
-
+)
+# Output the file
 with open('index.html', 'w') as writer:
 	writer.write(renderedTemplate)
 
