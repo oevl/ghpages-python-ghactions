@@ -17,13 +17,13 @@ jobs:
       run: pip install -r requirements.txt
     - name: Run builder.py
       run: python builder.py
-    - name: Git config, commit and push
-      run: |
-         git config user.name 'Omar Vasquez Lima'
-         git config user.email 'omar.vasquezlima@gmail.com'
-         git add index.html
-         git commit -m 'Build commit.'
-         git push
+#   - name: Git config, commit and push
+#      run: |
+#         git config user.name 'Omar Vasquez Lima'
+#         git config user.email 'omar.vasquezlima@gmail.com'
+#         git add index.html
+#         git commit -m 'Build commit.'
+#         git push
     - name: publish-to-git
       uses: seanmiddleditch/gha-publish-to-git@v1
       with:
