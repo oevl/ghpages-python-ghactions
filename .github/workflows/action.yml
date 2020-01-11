@@ -22,7 +22,8 @@ jobs:
          git config user.name 'Omar Vasquez Lima'
          git config user.email 'omar.vasquezlima@gmail.com'
          git add index.html
-         git commit -m 'Initial commit.'
+         git commit -m 'Build commit.'
+         git push
     - name: publish-to-git
       uses: seanmiddleditch/gha-publish-to-git@v1
       with:
