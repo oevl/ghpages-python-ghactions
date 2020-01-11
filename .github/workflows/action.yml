@@ -13,9 +13,16 @@ jobs:
       uses: actions/setup-python@v1
       with:
         python-version: '3.7' # Semantic version range syntax or exact version of a Python version
-        architecture: 'x64' # Optional - x64 or x86, defaults to x64
-    # You can test your matrix by printing the current Python version
     - name: Set up Python environment
       run: pip install -r requirements.txt
     - name: Run builder.py
-      run: python builder.py
+      run: mkdir static && python builder.py
+    - name: publish-to-git
+      uses: seanmiddleditch/gha-publish-to-git@v1
+      with:
+      # Destination repository
+        repository: oevl/ghpages-python-ghactions
+        github_pat: '${{ secrets.GH_PAT }}'
+        if: success() && github.event == 'push'
+        branch: master
+      
