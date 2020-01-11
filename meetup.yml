@@ -1,0 +1,54 @@
+Meetup:
+  Build:
+  Vol: 33
+  Fecha: 18 de diciembre de 2019
+  Hora: "6:30 PM"
+  Lugar: New York Bagel Café, Vía Argentina
+  Foto: python-pa-meetup-photo.jpg  
+Saludo:
+  Titulo: ¡Hola a todos!
+  Texto: >
+    Somos un grupo de personas interesadas en el lenguaje de programación <strong>Python</strong> o cualquier tecnología relacionada. Organizamos eventos mensuales para compartir conocimiento y hacer networking.
+Actividades:
+  Talks:
+    - Titulo: Blockchains con Python
+      Expositor: Marta Maleyka ft. Adriaan Beiertz
+    - Titulo: Basic Excel Operations with Python
+      Expositor: Santos Rivera
+  Workshops: 
+    - Titulo: 
+      Expositor: 
+  Networking: >
+    Los invitamos a que traigan tarjetas de presentación para intercambiar con otros asistentes y generar nuevas conversaciones y contactos.
+Datos:
+  Fecha: Miércoles 11 de diciembre de 2019
+  Lugar: Salón 254 Universidad Interamericana de Panamá - Sede Av. Ricardo J. Alfaro
+  Costo: ¡Libre!
+Expositores:
+  - Nombre: José Arnulfo
+    Foto: staff/arnulfo.jpg
+    Actividad: MC
+  - Nombre: Marta Maleyka
+    Foto: staff/marta.jpg
+    Actividad: Blockchains with Python
+  - Nombre: Adriaan Beiertz
+    Foto: staff/adriaan.jpg
+    Actividad: "Reto del mes: Blockchain with Python"
+  - Nombre: Santos Rivera
+    Foto: speakers/santos.jpg
+    Actividad: "Basic Excel Operations with Python"
+Patrocinantes:
+  - Logo: logo-new-york-bagel-cafe.jpg
+    AlturaLogo: 200
+    Nombre: "New York Bagel Café"
+Testimonios:
+  - Texto: >
+      Excelente el entusiasmo de todos los presentadores y las oportunidades que brindan a los que desean ser parte de la comunidad.
+    Nombre: Carol G. Miranda
+  - Texto: >
+      Muy buenos, en cada meetup hay un tema distinto, son precisos con sus charlas a pesar de que son pocas horas, la iniciativa de que algunos estudiantes presenten sus proyectos universitarios es bastante buena, aunque sería excelente también ver proyectos profesionales.
+    Nombre: Eduardo París
+  - Texto: >
+      Son una gran experiencia y la idea de compartir de forma real apoya mucho a la comunidad. Son muy organizados, los lugares que escogen son un lujo. Los temas son interesantes y los presentadores demuestran un gran dominio de su área.
+    Nombre: Fernando Cutire
+MeetupURL: https://www.meetup.com/es-ES/Python-Panama/events/266892502/
