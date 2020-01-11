@@ -4,7 +4,7 @@ import yaml
 import jinja2
 
 # Import Meetup Data from YAML file
-with open('meetup.yaml') as f:
+with open('meetup.yml') as f:
     
     data = yaml.load(f, Loader=yaml.FullLoader)
 	
