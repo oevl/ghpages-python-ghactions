@@ -17,6 +17,9 @@ jobs:
       run: pip install -r requirements.txt
     - name: Run builder.py
       run: mkdir static && python builder.py
+    - name: |
+        git config --global user.name 'Omar Vasquez Lima'
+        git config --global user.email 'omar.vasquezlima@gmail.com'
     - name: publish-to-git
       uses: seanmiddleditch/gha-publish-to-git@v1
       with:
