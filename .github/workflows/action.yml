@@ -1,0 +1,21 @@
+name: Python CI
+
+on: [push]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v1
+    - name: Set up Python 3.x
+      uses: actions/setup-python@v1
+      with:
+        python-version: '3.7' # Semantic version range syntax or exact version of a Python version
+        architecture: 'x64' # Optional - x64 or x86, defaults to x64
+    # You can test your matrix by printing the current Python version
+    - name: Set up Python environment
+      run: pip install -r requirements.txt
+    - name: Run builder.py
+      run: python builder.py
