@@ -19,15 +19,15 @@ jobs:
       run: mkdir static && python builder.py
     - name: Set git user and email configuration 
       run: |
-        git config --global user.name 'Omar Vasquez Lima'
-        git config --global user.email 'omar.vasquezlima@gmail.com'
+        git config user.name 'Omar Vasquez Lima'
+        git config user.email 'omar.vasquezlima@gmail.com'
     - name: publish-to-git
       uses: seanmiddleditch/gha-publish-to-git@v1
       with:
       # Destination repository
         repository: oevl/ghpages-python-ghactions
         github_pat: '${{ secrets.GH_PAT }}'
-        commit_author: omar.vasquezlima@gmail.com
+        commit_author: 'omar.vasquezlima@gmail.com'
         if: success() && github.event == 'push'
         branch: master
       
