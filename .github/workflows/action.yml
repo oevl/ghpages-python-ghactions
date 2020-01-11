@@ -19,8 +19,8 @@ jobs:
       run: python builder.py
     - name: Git config, commit and push
       run: |
-      git config user.name 'Omar Vasquez Lima'
-      git config user.email 'omar.vasquezlima@gmail.com'
+        git config user.name 'Omar Vasquez Lima'
+        git config user.email 'omar.vasquezlima@gmail.com'
 #         git add index.html
 #         git commit -m 'Build commit.'
 #         git push
