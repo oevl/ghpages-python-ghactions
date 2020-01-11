@@ -26,7 +26,7 @@ jobs:
     - name: publish-to-git
       uses: seanmiddleditch/gha-publish-to-git@v1
       with:
-        branch: master
+        branch: gh-pages
         repository: oevl/ghpages-python-ghactions
         github_pat: '${{ secrets.GH_PAT }}'
         commit_author: 'omar.vasquezlima@gmail.com'
