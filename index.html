@@ -32,10 +32,10 @@
         <!-- Header -->
         <header class="align--center pt3 pb2">
             <div class="container">
-                <h1 class="mb3" title="Python Panam&aacute; Meetup Vol. {{ Meetup.Vol }}"><img width="20%" src="img/logo-python-pa.png" alt="Python Panama"></h1>
-                <h2 class="mb3">Python Panam&aacute; Meetup Vol. {{ Meetup.Vol }}</h2>
-                <p class="mb1">{{ Meetup.Fecha }} - {{ Meetup.Hora }}</p>
-		<p class="mb1">{{ Meetup.Lugar }}</p>
+                <h1 class="mb3" title="Python Panam&aacute; Meetup Vol. 23"><img width="20%" src="img/logo-python-pa.png" alt="Python Panama"></h1>
+                <h2 class="mb3">Python Panam&aacute; Meetup Vol. 23</h2>
+                <p class="mb1">18 de diciembre de 2019 - 6:30 PM</p>
+		<p class="mb1">New York Bagel Café, Vía Argentina</p>
                 <p>Ciudad de Panam&aacute;, Panam&aacute;</p>
             </div>
         </header>
@@ -46,19 +46,23 @@
 
                 <!-- Info -->
                 <section class="pt2 pb3">                    
-                    <img class="mb3" src="img/{{ Meetup.Foto }}" alt="Meetup de Python Panama">
+                    <img class="mb3" src="img/python-pa-meetup-photo.jpg" alt="Meetup de Python Panama">
                     <div class="grid-row">
                         <div class="grid-column span-one-third mt1">
                             <img class="icon mb1" src="img/comment.svg">
-                            <p><strong>{{ Saludo.Titulo }}</strong><br>{{ Saludo.Texto }}</p>
+                            <p><strong>¡Hola a todos!</strong><br>Somos un grupo de personas interesadas en el lenguaje de programación <strong>Python</strong> o cualquier tecnología relacionada. Organizamos eventos mensuales para compartir conocimiento y hacer networking.
+</p>
                         </div>
                         <div class="grid-column span-one-third mt1">
                             <img class="icon mb1" src="img/flask.svg">
                             <p><strong>Actividades:</strong><br>
-                            <ul style="list-style-type: none; padding: 0; margin: 0;">{% for Talk in Actividades.Talks %}
-                                <li><strong>Talk {{ Actividades.Talks.index(Talk)+1}}: {{ Talk.Titulo}} </strong>- {{ Talk.Expositor }}</li>
-                                {% endfor %}
-                                <li><strong>Networking:</strong> {{ Actividades.Networking }}</li>
+                            <ul style="list-style-type: none; padding: 0; margin: 0;">
+                                <li><strong>Talk 1: Blockchains con Python </strong>- Marta Maleyka ft. Adriaan Beiertz</li>
+                                
+                                <li><strong>Talk 2: Basic Excel Operations with Python </strong>- Santos Rivera</li>
+                                
+                                <li><strong>Networking:</strong> Los invitamos a que traigan tarjetas de presentación para intercambiar con otros asistentes y generar nuevas conversaciones y contactos.
+</li>
                             </ul>
                         </p>
                         </div>
@@ -66,9 +70,9 @@
                             <img class="icon mb1" src="img/calendar.svg">
                             <p><strong>Datos del evento:</strong><br>
                                 <ul style="list-style-type: none; padding: 0; margin: 0;">
-                                    <li><strong>Día:</strong>{{Datos.Fecha}}</li>
-                                    <li><strong>Lugar:</strong> {{Datos.Lugar}}</li>
-                                    <li><strong>Costo:</strong>{{Datos.Costo}}</li>
+                                    <li><strong>Día:</strong>Miércoles 11 de diciembre de 2019</li>
+                                    <li><strong>Lugar:</strong> Salón 254 Universidad Interamericana de Panamá - Sede Av. Ricardo J. Alfaro</li>
+                                    <li><strong>Costo:</strong>¡Libre!</li>
                                 </ul>
                             </p>
                         </div>
@@ -80,12 +84,27 @@
                 <section class="pt2 pb2 align--center">
                     <h3 class="mb1">Expositores</h3>
                     <div class="grid-row">
-                        {% for Expositor in Expositores %}
-                        <div class="grid-column span-{{12/3}} mt3">
-                        <img class="mb1" src="img/{{Expositor.Foto}}" alt="Imagen de {{Expositor.Nombre}}">
-                        <p class="small">{{Expositor.Nombre}}</p><p class="small pt1"><i>{{Expositor.Actividad}}</i></p>
+                        
+                        <div class="grid-column span-4.0 mt3">
+                        <img class="mb1" src="img/staff/arnulfo.jpg" alt="Imagen de José Arnulfo">
+                        <p class="small">José Arnulfo</p><p class="small pt1"><i>MC</i></p>
                         </div>
-                        {% endfor %}
+                        
+                        <div class="grid-column span-4.0 mt3">
+                        <img class="mb1" src="img/staff/marta.jpg" alt="Imagen de Marta Maleyka">
+                        <p class="small">Marta Maleyka</p><p class="small pt1"><i>Blockchains with Python</i></p>
+                        </div>
+                        
+                        <div class="grid-column span-4.0 mt3">
+                        <img class="mb1" src="img/staff/adriaan.jpg" alt="Imagen de Adriaan Beiertz">
+                        <p class="small">Adriaan Beiertz</p><p class="small pt1"><i>Reto del mes: Blockchain with Python</i></p>
+                        </div>
+                        
+                        <div class="grid-column span-4.0 mt3">
+                        <img class="mb1" src="img/speakers/santos.jpg" alt="Imagen de Santos Rivera">
+                        <p class="small">Santos Rivera</p><p class="small pt1"><i>Basic Excel Operations with Python</i></p>
+                        </div>
+                        
                     </div>
                 </section>
                 <!-- Staff -->
@@ -135,30 +154,44 @@
                 <!-- Sponsors -->
                 <section class="pt3 pb3 align--center">
                     <h3 class="mb2">Patrocinado por:</h3>
-                    {% for Patrocinante in Patrocinantes %}
-                    <img class="m1" src="img/sponsors/{{Patrocinante.Logo}}" alt="Patrocinante.Nombre" style="height:{{Patrocinante.AlturaLogo}}px">
-                    {% endfor %}
+                    
+                    <img class="m1" src="img/sponsors/logo-new-york-bagel-cafe.jpg" alt="Patrocinante.Nombre" style="height:200px">
+                    
                 </section>
 
                 <!-- Testimonials -->
                 <section class="pt2 pb3">
                     <h3 class="align--center mb2">Qu&eacute; dicen otros Pythonistas...</h3>
                     <div class="grid-row">
-                        {% for Testimonio in Testimonios %}
+                        
                         <div class="grid-column span-one-third mt1">
                             <blockquote class="blockquote">
-                                <p>"{{ Testimonio.Texto.strip() }}"</p>
-                                <p>> <cite>{{Testimonio.Nombre}}</cite></p>
+                                <p>"Excelente el entusiasmo de todos los presentadores y las oportunidades que brindan a los que desean ser parte de la comunidad."</p>
+                                <p>> <cite>Carol G. Miranda</cite></p>
                             </blockquote>
                         </div>
-                        {% endfor %}
+                        
+                        <div class="grid-column span-one-third mt1">
+                            <blockquote class="blockquote">
+                                <p>"Muy buenos, en cada meetup hay un tema distinto, son precisos con sus charlas a pesar de que son pocas horas, la iniciativa de que algunos estudiantes presenten sus proyectos universitarios es bastante buena, aunque sería excelente también ver proyectos profesionales."</p>
+                                <p>> <cite>Eduardo París</cite></p>
+                            </blockquote>
+                        </div>
+                        
+                        <div class="grid-column span-one-third mt1">
+                            <blockquote class="blockquote">
+                                <p>"Son una gran experiencia y la idea de compartir de forma real apoya mucho a la comunidad. Son muy organizados, los lugares que escogen son un lujo. Los temas son interesantes y los presentadores demuestran un gran dominio de su área."</p>
+                                <p>> <cite>Fernando Cutire</cite></p>
+                            </blockquote>
+                        </div>
+                        
                     </div>
                 </section>
 
                 <!-- CTA -->
                 <section class="align--center pt3 pb3">
                     <p class="h3 mb2"><strong>Entrada gratis.</strong></p>
-                    <a href="{{ MeetupURL }}" class="btn btn--default">Reg&iacute;strate →</a>
+                    <a href="https://www.meetup.com/es-ES/Python-Panama/events/266892502/" class="btn btn--default">Reg&iacute;strate →</a>
                     <p class="small mt1 text--gray">Registro en Meetup.com</p>
                 </section>
 
@@ -181,4 +214,3 @@
 
     </body>
 </html>
-
