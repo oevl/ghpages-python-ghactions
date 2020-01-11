@@ -23,7 +23,7 @@ jobs:
         git config user.email 'omar.vasquezlima@gmail.com'
         git add index.html
         git commit -m 'Initial commit.'
-        git push origin/master
+        git push origin master
     - name: publish-to-git
       uses: seanmiddleditch/gha-publish-to-git@v1
       with:
