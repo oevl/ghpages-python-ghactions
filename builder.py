@@ -25,7 +25,7 @@ renderedTemplate= template.render(
 	MeetupURL = data['MeetupURL']
 )
 # Output the file
-with open('./site/index.html', 'w') as writer:
+with open('site/index.html', 'w') as writer:
 	writer.write(renderedTemplate)
 
 
