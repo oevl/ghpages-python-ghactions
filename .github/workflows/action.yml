@@ -16,7 +16,7 @@ jobs:
     - name: Set up Python environment
       run: pip install -r requirements.txt
     - name: Run builder.py
-      run: mkdir static && python builder.py
+      run: python builder.py
     - name: Set git user and email configuration 
       run: |
         git config user.name 'Omar Vasquez Lima'

@@ -25,7 +25,7 @@ renderedTemplate= template.render(
 	MeetupURL = data['MeetupURL']
 )  # this is where to put args to the template renderer
 
-with open('static/index.html', 'w') as writer:
+with open('index.html', 'w') as writer:
 	writer.write(renderedTemplate)
 
 
